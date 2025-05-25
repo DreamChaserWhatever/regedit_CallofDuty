@@ -5,7 +5,7 @@
 
 ---
 
-## ?? 功能说明
+## :gear: 功能说明
 
 - 自动修改《使命召唤模拟器手游》在Windows注册表中的灵敏度相关参数
 - 支持动态匹配多种游戏模式（PVE/PVP/TD/Br等）及自定义配置项
@@ -13,7 +13,7 @@
 
 ---
 
-## ? 下载与使用
+## :rocket: 下载与使用
 
 ### 方式一：直接下载EXE（推荐）
 
@@ -38,7 +38,7 @@
 
 ---
 
-## ? EXE打包指南
+## :package: EXE打包指南
 
 ### 打包步骤
 
@@ -54,7 +54,7 @@
 
 ---
 
-## ? 程序细节
+## :mag: 程序细节
 
 - **注册表路径**：`HKEY_CURRENT_USER\SOFTWARE\Tencent\Call-of-Duty`
 - **匹配规则**：使用正则表达式筛选目标键值：
@@ -62,7 +62,7 @@
   ^CODM_\d+_iMSDK_CN_(PVE|PVP|TD|Br|PVEFiring|PVPFiring|TDFiring|BrFiring)(_(?:RotateSensitive|AimRotate|ReddotHolo|Sniper|Free|ACOG|[\dX]+|SkyVehicle|GroundVehicle|Vertical|Ult).*?)?_h\d+$
 ---
 
-## ?? 注意事项
+## :warning: 注意事项
 
 1. **必须使用管理员权限运行**，否则无法修改注册表
 2. 游戏更新后可能导致配置失效，需重新运行工具
@@ -75,24 +75,24 @@
 
 ---
 
-? **重要说明**  
+:information_source: **重要说明**  
 程序运行后若提示`[修改已修改完毕]`，表示所有符合条件的注册表键值已处理完成。建议重启游戏以使修改生效。
 ---
 
-## ? 开源协议
+## :book: 开源协议
 
 本项目基于 **[MIT License](LICENSE)** 开源，您可享有以下权利：
 
-- ? **自由使用**：可无限制用于个人/学习用途
-- ? **二次开发**：允许修改源代码并创建衍生版本
-- ? **代码分发**：可自由分享源码或编译后的程序
+- :white_check_mark: **自由使用**：可无限制用于个人/学习用途
+- :white_check_mark: **二次开发**：允许修改源代码并创建衍生版本
+- :white_check_mark: **代码分发**：可自由分享源码或编译后的程序
 
 **唯一约束**：  
-? 二次分发时必须包含原始许可证文件及作者声明（见源码文件头部注释）
+:information_source: 二次分发时必须包含原始许可证文件及作者声明（见源码文件头部注释）
 
 ---
 
-## ? 支持与贡献
+## :sparkles: 支持与贡献
 
 ### 问题反馈与建议
 
@@ -113,8 +113,8 @@
 
 ### 开发者联系
 
-- ? **Bilibili**：[一面墙的双脚](https://space.bilibili.com/3546759762545419)（这位大佬找到的）
-- ? **Bilibili**：[DC随便](https://space.bilibili.com/3493117248407780)（我只是写代码的那位）
-- ? **GitHub**：[DreamChaserWhatever](https://github.com/DreamChaserWhatever)
+- :tv: **Bilibili**：[一面墙的双脚](https://space.bilibili.com/3546759762545419)（这位大佬找到的）
+- :tv: **Bilibili**：[DC随便](https://space.bilibili.com/3493117248407780)（我只是写代码的那位）
+- :octocat: **GitHub**：[DreamChaserWhatever](https://github.com/DreamChaserWhatever)
 
-> 如果本项目对你有帮助，请点击右上角 ? **Star** 支持开发者持续更新！
+> 如果本项目对你有帮助，请点击右上角 :sparkles: **Star** 支持开发者持续更新！
