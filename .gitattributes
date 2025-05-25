@@ -1,2 +1,4 @@
 *.html linguist-language=python
 *.toc linguist-language=python
+*.pkg linguist-language=python
+*.pyz linguist-language=python
