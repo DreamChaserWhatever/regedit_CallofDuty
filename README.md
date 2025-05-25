@@ -1,15 +1,15 @@
 # 使命召唤手游注册表灵敏度修改工具
 
-? **免责声明**  
+?? **免责声明**  
 本工具仅供学习交流使用，严禁用于商业用途。修改注册表存在风险，操作前请自行备份数据。因使用本工具造成的任何损失，作者概不负责。
 
 ---
 
-## ? 功能说明
+## ?? 功能说明
 
-- 自动修改《使命召唤手游》在Windows注册表中的灵敏度相关参数
-- 支持动态匹配多种游戏模式(PVE/PVP/TD/Br等)及自定义配置项
-- 修改键值首字节为 `0x01`，调整灵敏度逻辑(具体效果因游戏版本可能不同)
+- 自动修改《使命召唤模拟器手游》在Windows注册表中的灵敏度相关参数
+- 支持动态匹配多种游戏模式（PVE/PVP/TD/Br等）及自定义配置项
+- 修改键值首字节为 `0x01`，调整灵敏度逻辑（具体效果因游戏版本可能不同）
 
 ---
 
@@ -18,7 +18,7 @@
 ### 方式一：直接下载EXE（推荐）
 
 1. 前往 [Release页面](https://github.com/DreamChaserWhatever/regedit_CallofDuty/releases) 下载最新版本
-2. **右键以管理员身份运行**(必需系统权限)
+2. **右键以管理员身份运行**（必需系统权限）
 3. 按提示完成操作，程序会自动修改注册表
 
 ### 方式二：从源码运行（Python 3.13）
@@ -26,12 +26,15 @@
 1. 克隆仓库：
     ```bash
     git clone https://github.com/DreamChaserWhatever/regedit_CallofDuty.git
+    ```
 2. 安装依赖库：
-   ```bash
-   pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
+    ```
 3. 运行主程序：
     ```bash
-   python main.py
+    python main.py
+    ```
 
 ---
 
@@ -40,22 +43,23 @@
 ### 打包步骤
 
 1. 确保已安装全部依赖：
-   ```bash
-   pip install -r requirements.txt
-2. 执行打包命令(需提前准备app.ico图标 或 使用自带的main.ico)：
-   ```bash
-   pyinstaller --onefile --icon=main.ico main.py -n "CODM_Sensitivity_Tool"
-3. 生成的exe文件位于dist目录
+    ```bash
+    pip install -r requirements.txt
+    ```
+2. 执行打包命令（需提前准备 `app.ico` 图标 或 使用自带的 `main.ico`）：
+    ```bash
+    pyinstaller --onefile --icon=main.ico main.py -n "CODM_Sensitivity_Tool"
+    ```
+3. 生成的exe文件位于 `dist` 目录
 
 ---
 
-## ?? 程序细节
+## ? 程序细节
 
 - **注册表路径**：`HKEY_CURRENT_USER\SOFTWARE\Tencent\Call-of-Duty`
 - **匹配规则**：使用正则表达式筛选目标键值：
   ```regex
   ^CODM_\d+_iMSDK_CN_(PVE|PVP|TD|Br|PVEFiring|PVPFiring|TDFiring|BrFiring)(_(?:RotateSensitive|AimRotate|ReddotHolo|Sniper|Free|ACOG|[\dX]+|SkyVehicle|GroundVehicle|Vertical|Ult).*?)?_h\d+$
-
 ---
 
 ## ?? 注意事项
