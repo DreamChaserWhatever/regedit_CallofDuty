@@ -142,7 +142,7 @@ if __name__ == "__main__":
     print("仅供学习交流,开源免费工具")
     print("\nbilibili: DC随便 UID:3493117248407780")
     print("\nbilibili: https://space.bilibili.com/3493117248407780")
-    print("github:")
+    print("\ngithub: https://github.com/DreamChaserWhatever")
 
     # ——————————————————————————————————————————
     if not ctypes.windll.shell32.IsUserAnAdmin():
