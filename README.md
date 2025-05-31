@@ -1,4 +1,5 @@
-# 使命召唤手游注册表灵敏度修改工具
+# 使命召唤手游注册表改工具
+-  包含灵敏度和帧率的修改
 
 :warning: **免责声明**  
 本工具仅供学习交流使用，严禁用于商业用途。修改注册表存在风险，操作前请自行备份数据。因使用本工具造成的任何损失，作者概不负责。
@@ -7,9 +8,10 @@
 
 ## :gear: 功能说明
 
-- 自动修改《使命召唤模拟器手游》在Windows注册表中的灵敏度相关参数
+- 自动修改《使命召唤模拟器手游》在Windows注册表中的灵敏度和帧率相关参数
 - 支持动态匹配多种游戏模式（PVE/PVP/TD/Br等）及自定义配置项
-- 修改键值首字节为 `0x01`，调整灵敏度逻辑（具体效果因游戏版本可能不同）
+- 灵敏度:修改键值首字节为 `0x01`，调整灵敏度逻辑
+- 帧率:修改FramerateCustomizeValue的值为0，调整帧率无上限
 
 ---
 
@@ -18,9 +20,11 @@
 ### 方式一：直接下载EXE（推荐）
 
 1. 前往 [Release页面](https://github.com/DreamChaserWhatever/regedit_CallofDuty/releases) 下载最新版本
-2. 使用前应在游戏里把每一个灵敏度都拖动一下(只有动过的设置才会生成注册表)
-3. **右键以管理员身份运行**（必需系统权限）
-4. 按提示完成操作，程序会自动修改注册表
+2. 使用前应在游戏里把每一个灵敏度都拖动一下
+3. 使用前应在画质设置打开帧数微调(只有动过的设置才会生成注册表)
+4. **右键以管理员身份运行**（必需系统权限）
+5. 按提示完成操作，程序会自动修改注册表
+6. 如果有修改过灵敏度或帧率的话要重新打开软件使用
 
 ### 方式二：从源码运行（Python 3.13）
 
@@ -60,7 +64,8 @@
 - **注册表路径**：`HKEY_CURRENT_USER\SOFTWARE\Tencent\Call-of-Duty`
 - **匹配规则**：使用正则表达式筛选目标键值：
   ```regex
-  ^CODM_\d+_iMSDK_CN_(PVE|PVP|TD|Br|PVEFiring|PVPFiring|TDFiring|BrFiring)(_(?:RotateSensitive|AimRotate|ReddotHolo|Sniper|Free|ACOG|[\dX]+|SkyVehicle|GroundVehicle|Vertical|Ult).*?)?_h\d+$
+  灵敏度: ^CODM_\d+_iMSDK_CN_(PVE|PVP|TD|Br|PVEFiring|PVPFiring|TDFiring|BrFiring)(_(?:RotateSensitive|AimRotate|ReddotHolo|Sniper|Free|ACOG|[\dX]+|SkyVehicle|GroundVehicle|Vertical|Ult).*?)?_h\d+$
+  帧率: ^CODM_\d+_iMSDK_CN_(EnableFramerateCustomize|FramerateCustomizeValue)_h\d+$
 ---
 
 ## :warning: 注意事项
@@ -82,7 +87,7 @@
 
 ## :book: 开源协议
 
-本项目基于 **[MIT License](LICENSE)** 开源，您可享有以下权利：
+本项目基于 **[MIT License](https://github.com/DreamChaserWhatever/regedit_CallofDuty/blob/main/LICENSE)** 开源，您可享有以下权利：
 
 - :white_check_mark: **自由使用**：可无限制用于个人/学习用途
 - :white_check_mark: **二次开发**：允许修改源代码并创建衍生版本
